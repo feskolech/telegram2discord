@@ -1,0 +1,6 @@
+services:
+  tg2ds:
+    build: .
+    env_file:
+      - .env
+    restart: unless-stopped
