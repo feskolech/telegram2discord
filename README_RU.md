@@ -46,11 +46,23 @@
 1) Скопируйте `.env.example` в `.env` и заполните.
 2) Запустите:
 ```bash
-docker-compose up -d --build
+docker-compose up -d
 ```
 3) Логи:
 ```bash
 docker-compose logs -f
+```
+
+## Запуск из GHCR (готовый образ)
+Без локальной сборки:
+```bash
+docker pull ghcr.io/feskolech/telegram2discord:latest
+docker run -d --name tg2ds --env-file .env --restart unless-stopped ghcr.io/feskolech/telegram2discord:latest
+```
+
+Или через docker‑compose (образ уже указан в `docker-compose.yml`):
+```bash
+docker-compose up -d
 ```
 
 ## Настройки (.env)

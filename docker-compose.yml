@@ -1,6 +1,6 @@
 services:
   tg2ds:
-    build: .
+    image: ghcr.io/feskolech/telegram2discord:latest
     env_file:
       - .env
     restart: unless-stopped
